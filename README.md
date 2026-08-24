@@ -190,12 +190,12 @@ print(classification_report(y_test, predictions))
 
 
 <H3>Output:</H3>
-<img width="329" height="206" alt="image" src="https://github.com/user-attachments/assets/eabbda84-c23a-47cf-971b-f81aa4154332" /><br>
-<img width="319" height="37" alt="image" src="https://github.com/user-attachments/assets/023b66b9-bcaf-4ae0-9f7a-0d17b5b3b565" /><br>
-<img width="190" height="113" alt="image" src="https://github.com/user-attachments/assets/851ad782-2d14-4aed-92ca-abb58e44c821" /><br>
-<img width="362" height="44" alt="image" src="https://github.com/user-attachments/assets/e149de79-7a14-4b6d-9a0c-5d58056c08cd" /><br>
-<img width="368" height="35" alt="image" src="https://github.com/user-attachments/assets/f0adb445-7f78-4fb6-8ad3-c40ea3e6aab8" /><br>
-<img width="361" height="206" alt="image" src="https://github.com/user-attachments/assets/7d27f76f-64af-4668-8c8c-6a26928effca" /><br>
+<img width="329" height="206" alt="image" src="https://github.com/user-attachments/assets/eabbda84-c23a-47cf-971b-f81aa4154332" /><br><br>
+<img width="319" height="37" alt="image" src="https://github.com/user-attachments/assets/023b66b9-bcaf-4ae0-9f7a-0d17b5b3b565" /><br><br>
+<img width="190" height="113" alt="image" src="https://github.com/user-attachments/assets/851ad782-2d14-4aed-92ca-abb58e44c821" /><br>>br>
+<img width="362" height="44" alt="image" src="https://github.com/user-attachments/assets/e149de79-7a14-4b6d-9a0c-5d58056c08cd" /><br><br>
+<img width="368" height="35" alt="image" src="https://github.com/user-attachments/assets/f0adb445-7f78-4fb6-8ad3-c40ea3e6aab8" /><br><br>
+<img width="361" height="206" alt="image" src="https://github.com/user-attachments/assets/7d27f76f-64af-4668-8c8c-6a26928effca" /><br><br>
 
 
 
