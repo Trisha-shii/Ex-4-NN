@@ -116,11 +116,88 @@ Normalize our dataset.
 
 <H3>Program:</H3> 
 
-Insert your code here
+```python
+import pandas as pd
+import sklearn
+from sklearn import preprocessing
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+from sklearn.neural_network import MLPClassifier
+from sklearn.metrics import classification_report, confusion_matrix
+
+# Load the Iris dataset from UCI repository
+url = 'https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data'
+names = ['sepal-length', 'sepal-width', 'petal-length', 'petal-width', 'Class']
+irisdata = pd.read_csv(url, names=names)
+
+# Prepare features (X) and labels (y)
+X = irisdata.iloc[:, 0:4]
+y = irisdata.select_dtypes(include=[object])
+
+
+# Display sample data
+print("Features (first 5 rows):")
+print(X.head())
+print("\nLabels (first 5 rows):")
+print(y.head())
+
+# Show unique classes
+print("\nUnique classes in the dataset:")
+print(y.Class.unique())
+
+
+# Convert categorical labels to numerical values
+le = preprocessing.LabelEncoder()
+y = y.apply(le.fit_transform)
+print("\nEncoded labels (first 5 rows):")
+print(y.head())
+
+
+# Split data into training and test sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.20)
+
+
+
+# Standardize features
+scaler = StandardScaler()
+scaler.fit(X_train)
+X_train = scaler.transform(X_train)
+X_test = scaler.transform(X_test)
+
+
+# Create and train Multi-layer Perceptron classifier
+mlp = MLPClassifier(hidden_layer_sizes=(10, 10, 10), max_iter=1000)
+mlp.fit(X_train, y_train.values.ravel())
+
+
+# Make predictions
+predictions = mlp.predict(X_test)
+print("\nModel predictions:")
+print(predictions)
+
+
+
+# Evaluate model performance
+print("\nConfusion Matrix:")
+print(confusion_matrix(y_test, predictions))
+print("\nClassification Report:")
+print(classification_report(y_test, predictions))
+
+
+
+
+```
+
 
 <H3>Output:</H3>
+<img width="329" height="206" alt="image" src="https://github.com/user-attachments/assets/eabbda84-c23a-47cf-971b-f81aa4154332" />
+<img width="190" height="113" alt="image" src="https://github.com/user-attachments/assets/851ad782-2d14-4aed-92ca-abb58e44c821" />
+<img width="362" height="44" alt="image" src="https://github.com/user-attachments/assets/e149de79-7a14-4b6d-9a0c-5d58056c08cd" />
+<img width="368" height="35" alt="image" src="https://github.com/user-attachments/assets/f0adb445-7f78-4fb6-8ad3-c40ea3e6aab8" />
+<img width="361" height="206" alt="image" src="https://github.com/user-attachments/assets/7d27f76f-64af-4668-8c8c-6a26928effca" />
 
-Show your results here
+
+
 
 <H3>Result:</H3>
 Thus, MLP is implemented for multi-classification using python.
